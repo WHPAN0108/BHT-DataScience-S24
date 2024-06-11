@@ -74,9 +74,9 @@ head(birthwt_mod)
 ## Scatror plot
 ```{r }
 
-ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth(method = lm)
+#ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth(method = lm)
 
-ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth()
+ggplot(data=birthwt_mod, aes(x=lwt, y=bwt))+geom_point(aes(color=race))+  geom_smooth(method =lm,se = F) +facet_grid( race ~smoke )
 
 ```
 
